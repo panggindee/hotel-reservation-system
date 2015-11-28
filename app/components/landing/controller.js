@@ -9,6 +9,7 @@ function controller ($scope, $controller, $window, $http, CommonService) {
   $scope.data.balancepax='';
   $scope.data.samefloor=1;
   $scope.filter={};
+  $scope.filter.room='';
   $scope.filter.floor='';
   $scope.filter.as=1;
   $scope.filter.ad=1;
@@ -85,6 +86,9 @@ function controller ($scope, $controller, $window, $http, CommonService) {
   };
   $scope.filterFloor = function(floor) {
     return ($scope.filter.floor == '' || $scope.filter.floor==floor);
+  };
+  $scope.filterRoom = function(room) {
+    return ($scope.filter.room === '' || $scope.filter.room==room);
   };
   $scope.updatePax = function() {
     $scope.data.balancepax = $scope.data.pax;
