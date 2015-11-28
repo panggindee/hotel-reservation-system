@@ -1,0 +1,252 @@
+//variables
+$bgcolor: #fff;
+$pricolor: #fff;
+$seccolor: #fff;
+$topbarcolor: #008cba;
+$word: #6e7b84;
+$hovercolor: #e5d62f;
+$bordercolor: #eee;
+
+$fontsize: 1rem;
+$fontheading: 'Josefin Sans', sans-serif;
+$fontbody: 'Lato', sans-serif;
+
+/* for sticky footer */
+html, body {
+  height: 100%;
+}
+
+/* for sticky footer */
+.wrapper {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.push {
+  height: 50px; /* .push must be the same height as .footer */
+}
+
+//html element
+html {
+  body {
+    background-color: $bgcolor;
+    font-size: $fontsize;
+
+
+    h1,h2,h3,h4,h5,h6 {
+      color: $word;
+      font-family: $fontheading;
+      font-weight: bold;
+    }
+
+    p {
+      color: $word;
+      font-size: 1.1rem;
+      font-family: $fontbody;
+      margin-top: .5rem;
+    }
+
+    label {
+      small.right {
+        line-height: 2;
+      }
+    }
+
+    ul {
+      li {
+        color: $word;
+        font-size: 1.1rem;
+        font-family: $fontbody;
+      }
+    }
+
+    footer {
+      small {
+        color: $word;
+        padding-bottom: .5rem;
+      }
+    }
+
+    table.responsive {
+      th, td {
+        padding: .3rem;
+        font-size: .6rem
+      }
+    }
+  }
+}
+
+//customised slick js
+.slick-prev {
+  margin-left: 2.5rem;
+}
+.slick-next {
+  margin-right: 2.5rem;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: $topbarcolor !important;
+}
+
+//customised foundation top bar
+.top-bar,
+.title-area,
+.toggle-topbar {
+  background-color: $bgcolor !important;
+}
+
+.top-bar {
+
+  height: 4rem;
+
+  .title-area {
+    margin-top: .5rem;
+  }
+
+  .toggle-topbar.menu-icon {
+    a {
+      color: $topbarcolor !important;
+    }
+    a::after {
+      box-shadow: 0 10px 0 1px $topbarcolor, 0 16px 0 1px $topbarcolor, 0 22px 0 1px $topbarcolor;
+    }
+  }
+}
+
+.top-bar.expanded {
+  .toggle-topbar {
+    a::after,
+    a:hover:after {
+      box-shadow: 0 10px 0 1px $topbarcolor, 0 16px 0 1px $topbarcolor, 0 22px 0 1px $topbarcolor;
+    }
+  }
+
+  .top-bar-section {
+    margin-top: .75rem;
+    ul {
+      background-color: $bgcolor !important;
+      li {
+        border-bottom: solid 1px $bordercolor;
+      }
+    }
+  }
+}
+
+.top-bar-section {
+
+  background: $bgcolor !important;
+  margin-top: .5rem;
+
+  ul {
+    background-color: $bgcolor !important;
+    li {
+      background: inherit;
+      a {
+        font-size: $fontsize;
+      }
+
+      a:hover {
+        h1,h2,h3,h4,h5 {
+          background: $bgcolor !important;
+          color: $hovercolor;
+          transition: color 300ms;
+        }
+      }
+    }
+    li.show-for-small-only {
+      border-bottom: solid 1px $bordercolor;
+    }
+  }
+
+  li:not(.has-form) {
+    a, a:not(.button) {
+      background: $bgcolor !important;
+      color: $topbarcolor;
+    }
+
+    a:hover, a:not(.button):hover {
+      background: $bgcolor !important;
+      color: $hovercolor;
+      transition: color 300ms;
+    }
+  }
+
+  .dropdown {
+
+    background: inherit;
+
+    li {
+      border-bottom: solid 1px $bordercolor;
+    }
+
+    li:not(.has-form):not(.active) {
+      a, a:not(.button) {
+        background: $bgcolor !important;
+      }
+    }
+
+    li:not(.has-form):not(.active):hover {
+      a:hover, a:not(.button):hover {
+        background: $bgcolor !important;
+        color: $hovercolor;
+        transition: color 300ms;
+      }
+    }
+  }
+}
+
+//customised foundation columns
+.columns {
+  margin-top: .5rem;
+}
+
+//margins
+.no-margin {
+  margin: 0 !important;
+}
+.margin-top-4 {
+  margin-top: 4rem;
+}
+
+//classes
+.backdrop {
+  height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.full-width {
+  max-width: 100%;
+  background-color: $bgcolor;
+}
+.no-padding {
+  padding: 0 !important;
+}
+.clear {
+  clear: both;
+  float: left !important;
+}
+
+.header {
+  font-size: 8rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+input.fontawesome {
+  font-family: Arial, FontAwesome;
+}

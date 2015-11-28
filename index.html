@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" data-ng-app="app" xmlns:og="http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <!-- If you delete this meta tag World War Z will become a reality -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hitchins FE Marketing Pte Ltd">
+  <title>Hotel Reservation System</title>
+  <base href="/">
+  <link rel="shortcut icon" href="assets/img/favicon.ico">
+  <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Josefin+Sans:300|Lato:300'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/5.2.0/css/foundation.css">
+  <link rel="stylesheet" href="assets/css/responsive-tables.min.css">
+  <link rel="stylesheet" href="assets/css/app.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div data-ng-view autoscroll="true"></div>
+    <div class="push"></div>
+  </div>
+  <div ng-include="'app/shared/footer/footer.html'"></div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-route.js"></script>
+  <script src="assets/js/mm-foundation-0.0.6.min.js"></script>
+  <script src="app/app.directive.min.js"></script>
+  <script src="app/app.foundation.min.js"></script>
+  <script src="app/app.service.min.js"></script>
+  <script src="app/app.module.js"></script>
+</body>
+</html>
