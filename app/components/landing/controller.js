@@ -1,6 +1,5 @@
-var app = angular.module('app.main', []);
-function controller ($scope, $controller, $window, $http, CommonService) {
-  angular.extend(this, $controller('DefaultCtrl', {$scope: $scope}));
+var app = angular.module('app', []);
+function controller ($scope, $controller, $window, $http) {
 
   // create a blank object to hold our form information
   // $scope will allow this to pass between controller and view
@@ -78,7 +77,6 @@ function controller ($scope, $controller, $window, $http, CommonService) {
     ];
     $window.localStorage.rooms = JSON.stringify($scope.rooms);
   } else {
-    console.log("loading rooms from local storage");
     $scope.rooms = $.parseJSON($window.localStorage.rooms);
   }
   $scope.filterRule = function(pax) {
@@ -121,7 +119,7 @@ function controller ($scope, $controller, $window, $http, CommonService) {
   $scope.removeFromCart = function(index) {
     $scope.cart.splice($scope.cart.indexOf(index), 1);
     $scope.data.balancepax += $scope.rooms[index].pax;
-    updateFloor();
+    $scope.updateFloor();
     $scope.alerts = [];
     $scope.cart.sort();
   };
@@ -148,5 +146,5 @@ function controller ($scope, $controller, $window, $http, CommonService) {
     $window.location.reload();
   }
 };
-controller.$inject = ['$scope', '$controller', '$window', '$http', 'CommonService'];
+controller.$inject = ['$scope', '$controller', '$window', '$http'];
 app.controller('LandingCtrl', controller);
